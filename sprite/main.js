@@ -1,3 +1,5 @@
+const pathAvatar = 'http://localhost:3000/assets/sprite-avatar/'
+
 $(document).ready(function(){
     initBaseScene();
 });
@@ -68,7 +70,7 @@ function LoadResults (data){
         $("#resultContainer").append($("<div></div>")
             .addClass("megucaIcon")
             .attr("id","meguca_"+value)
-            .css("background", "url(https://media.nuke.moe/magireco/assets/icon/"+data[value].ICON+")")
+            .css("background", "url(" + pathAvatar +data[value].ICON+")")
             .css("background-size", "130px 144px")
             .mouseover(function(){
                 $(this).css("background-size", "105%");
